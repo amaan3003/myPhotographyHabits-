@@ -137,4 +137,3 @@ df['cluster'] = labels
 # Har cluster ka mean profile dekho
 print(df.groupby("cluster")[features].mean())
 
-cluster
