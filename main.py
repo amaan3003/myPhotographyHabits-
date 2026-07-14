@@ -116,11 +116,25 @@ df["is_low_light"] = df["iso"] > 1600
 # print(df.shape)
 # print(df.isna().sum())
 
-
-
 df = df[df["aperture"]>0].reset_index(drop=True)
-print(df[["focalLength", "iso", "aperture", "shutter", "exposure_value"]].describe())
-print(df.shape)
+
+
+features = ["focalLength", "iso", "aperture", "shutter", "exposure_value", "hour"]
+scaler = StandardScaler()
+
+
+scaled_df = pd.DataFrame(scaler.fit_transform(df[features]), columns=df[features].columns, index=df[features].index)
 
 
 
+
+kmeans = KMeans(n_clusters=4, random_state=42)
+
+
+labels = kmeans.fit_predict(scaled_df)
+df['cluster'] = labels
+
+# Har cluster ka mean profile dekho
+print(df.groupby("cluster")[features].mean())
+
+cluster
