@@ -139,9 +139,9 @@ print(df.groupby("cluster")[features].mean())
 
 cluster_name = {
     1 : 'late night ultra wide wide aperture shots',
-    2 : 'morning 4 k around 35 mm pr shots',
-    3 : 'dophar ke 3 bje 30 mm k around wale low iso shots',
-    4 : '50 mm lens se subha 6 bje k portraits'
+    2 : 'morning 4am 35 mm shot',
+    3 : 'afternoon 3, 30 mm in sunlight shots',
+    4 : '50 mm lens morning portraits'
 }
 
 df['cluster_name'] = df['cluster'].map(cluster_name)
