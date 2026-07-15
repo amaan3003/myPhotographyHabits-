@@ -17,7 +17,7 @@ from pathlib import Path
 import matplotlib.pyplot as plt
 from sklearn.preprocessing import StandardScaler
 from sklearn.cluster import KMeans
-
+import pickle
 #getting the input from the user about the folder their photos are in
 folders = [
     Path("C:/amaan/cameraPhotos/6thFebandGaon/gaon"),
@@ -137,3 +137,15 @@ df['cluster'] = labels
 # Har cluster ka mean profile dekho
 print(df.groupby("cluster")[features].mean())
 
+cluster_name = {
+    1 : 'late night ultra wide wide aperture shots',
+    2 : 'morning 4 k around 35 mm pr shots',
+    3 : 'dophar ke 3 bje 30 mm k around wale low iso shots',
+    4 : '50 mm lens se subha 6 bje k portraits'
+}
+
+df['cluster_name'] = df['cluster'].map(cluster_name)
+
+
+kmeans.predict('')
+print(df[df["cluster_name"]=='morning 4 k around 35 mm pr shots'])
