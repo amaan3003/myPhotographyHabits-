@@ -1,12 +1,12 @@
 # 📷 Photography Habit Analyser
 
-> Analyse your shooting patterns from RAW photo metadata — understand how, when, and how you shoot.
+> A simple tool which analyses your photography patterns from your RAW photo metadata — exactly tells how, when, and how you shoot.
 
 ---
 
 ## What It Does
 
-This tool reads EXIF metadata from your Canon RAW (`.CR2`) files and turns them into actionable insights about your photography habits.
+This tool reads  metadata from your RAW photos (`.CR2`) files and turns them into actionable insights about your photography habits.
 
 **You'll find out:**
 - 🕐 What time of day you shoot the most
@@ -14,10 +14,6 @@ This tool reads EXIF metadata from your Canon RAW (`.CR2`) files and turns them 
 - 🔆 Your ISO preferences
 - 📅 Your most active months
 - 📊 How ISO and focal length relate across your shoots
-
-
-
-Now it also discovers your unique shooting style using machine learning algorithms
 
 ---
 
